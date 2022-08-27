@@ -10,3 +10,8 @@ application.register("hello", HelloController)
 
 import BannerController from "./banner_controller"
 application.register("banner", BannerController)
+
+
+
+import NavbarController from "./navbar_controller"
+application.register("navbar", NavbarController)
