@@ -1,12 +1,19 @@
-<h1>Pages#home</h1>
-
   <div class="banner" data-controller = "banner">
+    <div class="image-filter"></div>
     <div class="banner__images">
-      <%= image_tag "banner-1.jpeg", class:"inactive"%>
-      <%= image_tag "banner-2.jpeg" %>
+        <%= image_tag "banner-1.jpeg", class:"inactive"%>
+        <%= image_tag "banner-2.jpeg" %>
     </div>
     <div class="banner__content">
       <h1>Travel. Give-back.</h1>
       <p>Join amazing volunteering oportunities at your destinations</p>
+      <div class="search-form">
+        <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+          <input type="text" name="search[query]" id="search_query" placeholder= "destination" />
+          <button name="button" type="submit" class="btn">
+            <i class="fas fa-search"></i> Search
+          </button>
+        <% end %>
+      </div>
     </div>
   </div>
