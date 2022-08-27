@@ -1,0 +1,56 @@
+.banner {
+  display: block;
+  height: 60vh;
+  position: relative;
+
+  .image-filter {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+    z-index: 0;
+  }
+
+
+  &__images {
+    display: block;
+    height: 100%;
+
+
+     img {
+      width: 100%;
+      height: 100%;
+      transition: all 2s ease-in-out;
+      opacity: 1;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+
+      &.inactive {
+        opacity: 0;
+        z-index: -2;
+      }
+
+     }
+
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    h1, p {
+      color: white;
+    }
+}
+}
